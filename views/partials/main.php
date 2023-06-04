@@ -20,8 +20,11 @@ include __DIR__ . '/../../database/db.php';
                     <h5 class="card-title"><?php echo $elem->titolo ?></h5>
                     <p class="card-text">Prezzo: <?php echo $elem->prezzo ?> $</p>
                     <a href="#" class="btn btn-primary">ORDINA</a>
+                    <p><?php echo $elem->getIcona() ?></p>
                 </div>
             </div>
+
+            
         
         <?php } ?>
 

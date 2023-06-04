@@ -65,7 +65,7 @@ class Prodotto {
 
 
 
-class CategoriaCani extends Prodotto {
+class ProdottoCani extends Prodotto {
     public function __construct($immagine, $titolo, $prezzo) {
         parent::__construct($immagine, $titolo, $prezzo, 'Cani');
     }
@@ -77,7 +77,7 @@ class CategoriaCani extends Prodotto {
 
 
 
-class CategoriaGatti extends Prodotto {
+class ProdottoGatti extends Prodotto {
     public function __construct($immagine, $titolo, $prezzo) {
         parent::__construct($immagine, $titolo, $prezzo, 'Gatti');
     }
