@@ -9,6 +9,7 @@ include __DIR__ . '/../../database/db.php';
 
     <h1 class="text-center">PET SHOP</h1>
 
+
     <div class="d-flex  justify-content-center mt-4 gap-2">
 
 
