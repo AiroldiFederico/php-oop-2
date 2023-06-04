@@ -12,7 +12,18 @@ include __DIR__ . '/../../database/db.php';
 
     <div class="d-flex  justify-content-center mt-4 gap-2">
 
+        <?php foreach($prodotti as $elem) { ?>
 
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?php echo $elem->titolo ?></h5>
+                    <p class="card-text">Prezzo: <?php echo $elem->prezzo ?> $</p>
+                    <a href="#" class="btn btn-primary">ORDINA</a>
+                </div>
+            </div>
+        
+        <?php } ?>
 
     </div>
 </main>

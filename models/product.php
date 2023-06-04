@@ -46,10 +46,10 @@
 
 // Classe base per i prodotti
 class Prodotto {
-    protected $immagine;
-    protected $titolo;
-    protected $prezzo;
-    protected $categoria;
+    public $immagine;
+    public $titolo;
+    public $prezzo;
+    public $categoria;
 
     public function __construct($immagine, $titolo, $prezzo, $categoria) {
         $this->immagine = $immagine;
