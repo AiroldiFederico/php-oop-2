@@ -26,6 +26,12 @@ class Prodotto {
     public function __construct($immagine, $titolo, $prezzo, $categoria) {
         $this->immagine = $immagine;
         $this->titolo = $titolo;
+
+        //controllo se il prezzo è inserito come numero intero
+        if (!is_int($prezzo)) {
+            throw new Exception('Il prezzo deve essere un numero intero.');
+        }
+
         $this->prezzo = $prezzo;
         $this->categoria = $categoria;
     }
