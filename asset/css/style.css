@@ -1,10 +1,10 @@
 
 /* PROPRIETA CORPO DOM */
-main {
+body {
     font-family: 'Rubik', sans-serif !important; font-weight: bold !important;
     word-spacing: 2px;
     height: 100vh !important;
-    background-color: #1d2d3c;
+    background-color: #1d2d3c !important;
 }
 
 /* PALETTE COLORI */
@@ -23,3 +23,52 @@ ul li {
     list-style-type: none !important;
 }
 
+h1 {
+    color: var(--color-2) !important;
+    font-size: 3.5rem !important;
+    font-weight: bolder !important;
+}
+
+.card {
+    background-color: var(--color-4) !important;
+}
+
+#icon {
+    position: absolute;
+    right: 1rem;
+    bottom: 0;
+    font-size: 1.5rem;
+    color: #1d2d3c  !important;
+}
+
+.btn {
+    background-color: var(--color-2) !important;
+    font-weight: bold !important;
+    
+}
+
+.btn {
+
+	background:linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+	background-color:#599bb3;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff !important;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3d768a;
+}
+.btn:hover {
+	background:linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+	background-color:#408c99;
+}
+.btn:active {
+	position:relative;
+	top:1px;
+}
+
+        
