@@ -4,45 +4,17 @@
 
 
 
+trait DisponibilitaProdotto {
+    protected $disponibile = true;
 
-// class Movie {
+    public function setDisponibile($disponibile) {
+        $this->disponibile = $disponibile;
+    }
 
-//     #variabili
-//     public $titolo;
-//     public $durata;
-//     public $anno;
-//     public $regista;
-//     public $genere;
-//     public $poster;
-//     public $prezzoBiglietto;
-
-
-//     #costruttore
-//     function __construct(String $titolo, Int $durata, Int $anno, String $regista, Array $genere, String $poster )
-//     {   
-//         $this->titolo = $titolo;
-//         $this->durata = $durata;
-//         $this->anno = $anno;
-//         $this->regista = $regista;
-//         $this->genere = $genere;
-//         $this->poster = $poster;
-//         $this->setPrezzo($durata);
-//     }
-
-//     #metodo
-//     public function setPrezzo($durata){
-//         if( $durata > 120 ){
-//             $this->prezzoBiglietto = '12$'; 
-//         } else {
-//             $this->prezzoBiglietto = '9$';
-//         }
-//     }
-
-//     public function getPrezzo() {
-//         return $this->prezzoBiglietto;
-//     }
-
-// }
+    public function isDisponibile() {
+        return $this->disponibile;
+    }
+}
 
 // Classe base per i prodotti
 class Prodotto {
@@ -66,6 +38,9 @@ class Prodotto {
 
 
 class ProdottoCani extends Prodotto {
+
+    use DisponibilitaProdotto;
+
     public function __construct($immagine, $titolo, $prezzo) {
         parent::__construct($immagine, $titolo, $prezzo, 'Cani');
     }
@@ -78,6 +53,9 @@ class ProdottoCani extends Prodotto {
 
 
 class ProdottoGatti extends Prodotto {
+
+    use DisponibilitaProdotto;
+    
     public function __construct($immagine, $titolo, $prezzo) {
         parent::__construct($immagine, $titolo, $prezzo, 'Gatti');
     }
