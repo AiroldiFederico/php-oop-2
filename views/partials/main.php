@@ -21,6 +21,13 @@ include __DIR__ . '/../../database/db.php';
                     <p class="card-text">Prezzo: <?php echo $elem->prezzo ?> $</p>
                     <a href="#" class="btn">ORDINA</a>
                     <p id="icon"><?php echo $elem->getIcona() ?></p>
+
+                    <?php if ($elem->isDisponibile()) { ?>
+                        <p class="text-success">Prodotto disponibile</p>
+                    <?php } else { ?>
+                        <p class="text-danger">Prodotto non disponibile</p>
+                    <?php } ?>
+
                 </div>
             </div>
 

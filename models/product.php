@@ -5,7 +5,7 @@
 
 
 trait DisponibilitaProdotto {
-    protected $disponibile = true;
+    public $disponibile = true;
 
     public function setDisponibile($disponibile) {
         $this->disponibile = $disponibile;
@@ -41,8 +41,9 @@ class ProdottoCani extends Prodotto {
 
     use DisponibilitaProdotto;
 
-    public function __construct($immagine, $titolo, $prezzo) {
-        parent::__construct($immagine, $titolo, $prezzo, 'Cani');
+    public function __construct($immagine, $titolo, $prezzo,  $disponibile = true) {
+        parent::__construct($immagine, $titolo, $prezzo, 'Cani', $disponibile);
+        $this->setDisponibile($disponibile);
     }
 
     public function getIcona() {
@@ -55,9 +56,10 @@ class ProdottoCani extends Prodotto {
 class ProdottoGatti extends Prodotto {
 
     use DisponibilitaProdotto;
-    
-    public function __construct($immagine, $titolo, $prezzo) {
-        parent::__construct($immagine, $titolo, $prezzo, 'Gatti');
+
+    public function __construct($immagine, $titolo, $prezzo,  $disponibile = true) {
+        parent::__construct($immagine, $titolo, $prezzo, 'Gatti', $disponibile);
+        $this->setDisponibile($disponibile);
     }
 
     public function getIcona() {
