@@ -19,7 +19,7 @@ include __DIR__ . '/../../database/db.php';
                 <div class="card-body position-relative">
 
                     <!-- NOME PRODOTTO -->
-                    <h5 class="card-title"><?php echo $elem->titolo ?></h5>
+                    <h5 class="card-title"><strong><?php echo $elem->titolo ?></strong></h5>
 
                     <!-- DISPONIBILITÀ PRODOTTO -->
                     <?php if ($elem->isDisponibile()) { ?>
